@@ -1,0 +1,86 @@
+@use "sass:color";
+
+// ---- 변수 사용하기 ----
+$primary-color: #3498db;
+$secondary-color: #ff5733;
+$text-color: #333;
+$padding: 10px;
+
+// ---- 상속하기 ----
+// '%' 기호 붙임
+%card-style {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// ---- 믹스인 ----
+// 효과를 담아두는 기능
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ---- 상단 ----
+.header {
+  background-color: powderblue;
+  padding: 20px;
+  h1 {
+    color: #fff;
+  }
+  h2 {
+    color: rgb(255, 143, 180);
+  }
+  .box {
+    @include flex-center;
+    width: 50px;
+    height: 50px;
+    background-color: palegreen;
+    span {
+      color: grey;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
+
+// ---- 푸터 ----
+.footer {
+  span {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+  }
+  background-color: color.scale($primary-color, $lightness: -30%);
+  color: #5f3232;
+  text-align: center;
+  padding: $padding * 2;
+}
+
+// ---- 변수 & 중첩하기 ----
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+
+  .card {
+    // 상속하기(@extend)
+    @extend %card-style;
+    // lighten ( , %) : 컬러 밝게해주는 효과
+    background-color: color.scale($primary-color, $lightness: 64%);
+    color: $text-color;
+    width: 40%;
+  }
+  h2 {
+    // rem : 기본 16px x 1.5 = 19.92px
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .spacial {
+    @include flex-center;
+    background-color: pink;
+  }
+}

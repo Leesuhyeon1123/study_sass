@@ -1,0 +1,66 @@
+.container .card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: powderblue;
+  padding: 20px;
+}
+.header h1 {
+  color: #fff;
+}
+.header h2 {
+  color: rgb(255, 143, 180);
+}
+.header .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: palegreen;
+}
+.header .box span {
+  color: grey;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer {
+  background-color: rgb(28.5740585774, 107.9464435146, 161.1259414226);
+  color: #5f3232;
+  text-align: center;
+  padding: 20px;
+}
+.footer span {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+.container .card {
+  background-color: rgb(181.92, 217.92, 242.04);
+  color: #333;
+  width: 40%;
+}
+.container h2 {
+  font-size: 1.5rem;
+}
+.container p {
+  font-size: 1rem;
+}
+.container .spacial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+/*# sourceMappingURL=style.css.map */
