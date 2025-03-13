@@ -1,0 +1,108 @@
+ul,
+li {
+  list-style: none;
+}
+// -----변수설정-----
+$box: skyblue;
+$ball: red;
+$yellow: yellow;
+//색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #c7d7f6;
+$link-color: red;
+$p-color: #282a36;
+
+//폰트사이즈
+$font-p: 13px;
+$font-h1: 30px;
+
+//폰트
+$base-font: "Noto Sans KR", sans-serif;
+body {
+  background-color: $bg-color;
+  font-size: $font-p;
+}
+h1 {
+  font-size: $font-h1;
+}
+.section {
+  background-color: $box;
+  width: 50%;
+  border-radius: 50px;
+  .list {
+    display: flex;
+    list-style: none;
+    li {
+      padding: 10px;
+      background-color: #fff;
+      &:last-child {
+        background-color: powderblue;
+      }
+      &:hover {
+        background-color: palegreen;
+      }
+    }
+  }
+}
+.btn {
+  background-color: pink;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  &.active {
+    background-color: paleturquoise;
+  }
+  &.active:hover {
+    background-color: rgb(134, 230, 230);
+  }
+  &:hover {
+    background-color: rgb(250, 168, 195);
+  }
+}
+// p style 적용하기
+.fs {
+  &-small {
+    color: gray;
+    font-size: 20px;
+  }
+  &-medium {
+    color: rgb(87, 87, 87);
+    font-size: 24px;
+  }
+  &-large {
+    color: rgb(41, 41, 41);
+    font-size: 28px;
+  }
+}
+.product {
+  $w: 300px;
+  $h: 20px;
+  li {
+    width: $w;
+    height: $h;
+    background-color: rgba(palegreen, 0.5) ;
+    margin: 3px;
+    border-radius: 20px;
+  }
+  // @at-root: product에 소속안돼있어도 똑같이 적용되게 찾음
+  @at-root .box {
+    width: $w;
+    height: $h;
+    background-color: pink;
+    font-weight: bold;
+    margin: {
+      top: 10px;
+      left: 30px;
+    }
+    padding: {
+      bottom: 40px;
+      right: 39px;
+    }
+  }
+}
+// 아래순위가 우선적용됨
+// .box{
+//     width: 500px;
+//     background-color: red;
+// }

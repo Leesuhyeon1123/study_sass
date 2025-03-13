@@ -1,0 +1,82 @@
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #c7d7f6;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.section {
+  background-color: skyblue;
+  width: 50%;
+  border-radius: 50px;
+}
+.section .list {
+  display: flex;
+  list-style: none;
+}
+.section .list li {
+  padding: 10px;
+  background-color: #fff;
+}
+.section .list li:last-child {
+  background-color: powderblue;
+}
+.section .list li:hover {
+  background-color: palegreen;
+}
+
+.btn {
+  background-color: pink;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+.btn.active {
+  background-color: paleturquoise;
+}
+.btn.active:hover {
+  background-color: rgb(134, 230, 230);
+}
+.btn:hover {
+  background-color: rgb(250, 168, 195);
+}
+
+.fs-small {
+  color: gray;
+  font-size: 20px;
+}
+.fs-medium {
+  color: rgb(87, 87, 87);
+  font-size: 24px;
+}
+.fs-large {
+  color: rgb(41, 41, 41);
+  font-size: 28px;
+}
+
+.product li {
+  width: 300px;
+  height: 20px;
+  background-color: rgba(152, 251, 152, 0.5);
+  margin: 3px;
+  border-radius: 20px;
+}
+.box {
+  width: 300px;
+  height: 20px;
+  background-color: pink;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 30px;
+  padding-bottom: 40px;
+  padding-right: 39px;
+}
+
+/*# sourceMappingURL=style.css.map */
