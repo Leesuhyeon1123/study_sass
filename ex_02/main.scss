@@ -1,0 +1,86 @@
+// sass로 폰트, 폰트사이즈 설정하기
+$family: unquote("Noto+Sans");
+@import url("http://fonts.googleapis.com/css?family=#{$family}");
+// 리스트 형태
+$font-size: 10px 12px 16px;
+// 맵 형태
+$font-size2: (
+  "h1": 45px,
+  "h2": 60px,
+  "p": 15px,
+);
+// 폰트 굵기 리스트(font-weight)
+$font-weights: (
+  "regular": 400,
+  "medium": 700,
+  "bold": 900,
+);
+// 기본 너비와 높이 설정
+$w: 200px;
+$h: 200px;
+
+// 크기와 위치 리스트 설정
+$sizes: 40px, 50px, 80px;
+$valid-sides: top, bottom, left, right, center;
+// 주요 색상 및 경로 변수 설정
+$color-primary: #e96900;
+$url-images: "./image/";
+
+// 이미지 파일명을 리스트로 정의
+$image-file: photo_01, photo_02, photo_03;
+// 전역 색상 변수 설정
+$mycolor: #7540e7;
+
+// sass사용
+h1 {
+  color: blue($color: #000000);
+}
+.test1 {
+  font-size: nth($font-size, 2);
+  //   맵형식 불러올때 map-get($)
+  font-weight: map-get($font-weights, "medium");
+}
+.test2 {
+  font-size: nth($font-size, 3);
+  //   맵형식 불러올때 map-get($)
+  font-weight: map-get($font-weights, "bold");
+  //   지정한 순서로 불러올때 nth
+  text-align: nth($valid-sides, 4);
+}
+// 이미지 넣기
+.test3 {
+  background: url("#{$url-images}#{nth($image-file , 1)}.jpg") no-repeat center;
+  width: 200px;
+  height: 200px;
+}
+.test4 {
+  background: url("#{$url-images}#{nth($image-file, 2)}.jpg") no-repeat center;
+  width: 200px;
+  height: 200px;
+}
+.test5 {
+  background: url("#{$url-images}#{nth($image-file, 3)}.jpg") no-repeat center;
+  width: 200px;
+  height: 200px;
+}
+.box {
+  color: #fff;
+  font-weight: map-get($font-weights, "bold");
+  width: $w;
+  height: $h;
+  background: $color-primary url("#{$url-images}#{nth($image-file, 3)}.jpg") no-repeat center;
+}
+// 글간격
+.info {
+  // info안에서만 적용됨
+  $mycolor: #67e740; // 지역 변수 (전역 변수와 다름)
+  $line-normal: 7;
+  font-size: 15px;
+  line-height: $line-normal;
+  text-align: nth($valid-sides, 5);
+  span {
+    $line-normal: 2;
+    line-height: $line-normal;
+    display: block;
+  }
+}

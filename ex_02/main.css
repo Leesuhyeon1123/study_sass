@@ -1,0 +1,51 @@
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans");
+h1 {
+  color: 0;
+}
+
+.test1 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.test2 {
+  font-size: 16px;
+  font-weight: 900;
+  text-align: right;
+}
+
+.test3 {
+  background: url("./image/photo_01.jpg") no-repeat center;
+  width: 200px;
+  height: 200px;
+}
+
+.test4 {
+  background: url("./image/photo_02.jpg") no-repeat center;
+  width: 200px;
+  height: 200px;
+}
+
+.test5 {
+  background: url("./image/photo_03.jpg") no-repeat center;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  color: #fff;
+  font-weight: 900;
+  width: 200px;
+  height: 200px;
+  background: #e96900 url("./image/photo_03.jpg") no-repeat center;
+}
+
+.info {
+  font-size: 15px;
+  line-height: 7;
+  text-align: center;
+}
+.info span {
+  line-height: 2;
+  display: block;
+}/*# sourceMappingURL=main.css.map */
